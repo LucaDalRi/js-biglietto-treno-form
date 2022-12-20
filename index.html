@@ -18,32 +18,35 @@
                             <h3>
                                 Nome Cognome
                             </h3>
-                            <input type="text" name="nome-cognome" id="nomeCognome">
+                            <input type="text" id="nomeCognome">
                         </div>
 
                         <div>
                             <h3>
                                 Km da percorrere
                             </h3>
-                            <input type="text" name="km-da-percorrere" id="kmDaPercorrere">
+                            <input type="text" id="kmDaPercorrere">
                         </div>
 
                         <div>
                             <h3>
                                 Fascia d'età
                             </h3>
-                            <select name="Fascia-eta" id="age">
-                                <option value="minorenne">Minorenne</option>
-                                <option value="maggiorenne">Maggiorenne</option>
-                                <option value="Over-65">Over 65</option>
+
+                            <select id="age">
+                                <option value="17">Minorenne</option>
+                                <option value="18">Maggiorenne</option>
+                                <option value="65">Over 65</option>
                             </select>
                         </div>
                     </div>
+
                     <div class="div-bottoni">
-                        <button class="buttonSubmin" type="submit">Genera</button>
-                        <button class="buttonReset" type="reset">Annulla</button>
+                        <button id="buttonSubmit">Genera</button>
+                        <button id="buttonReset" type="reset">Annulla</button>
                     </div>
                 </div>
+
                 <h2>
                     Il tuo biglietto
                 </h2>
@@ -55,7 +58,7 @@
                         <div class="nome-passeggiero">
                             <div>
                                 <p>Nome passeggiero</p>
-                                <span>Jon Snow</span>
+                                <span id="nome"></span>
                             </div>
                         </div>
                         <div class="container-tabella">
@@ -68,10 +71,10 @@
                                         <td>Costo biglietto</td>
                                     </tr>
                                     <tr>
-                                        <td>Biglietto standard</td>
-                                        <td>5</td>
-                                        <td>92911</td>
-                                        <td>2,10$</td>
+                                        <td id="biglietto"></td>
+                                        <td id="carrozza"></td>
+                                        <td id="codice"></td>
+                                        <td id="prezzo"></td>
                                     </tr>
                                 </tbody>
                             </table>
