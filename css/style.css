@@ -60,3 +60,7 @@ body{
 td{
     padding: 10px;
 }
+
+.hide-card{
+    display: none;
+}
