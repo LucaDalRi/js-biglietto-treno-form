@@ -34,17 +34,12 @@ let prezzoViaggio = (prezzoPerKm * kmDaPercorrere);
 const scontoQuaranta = ((prezzoViaggio * 40) / 100);
 const scontoVenti = ((prezzoViaggio * 20) / 100);
 
-function getRandomArbitrary(min, max) {
-    return Math.random() * (max - min) + min;
-  }
-  
-
 
 buttonSubmit.addEventListener('click',
 
     function() {
 
-        if (age.value == '17') {
+        if (age.value == 'Minorenne') {
 
             prezzoViaggio = (prezzoViaggio - scontoVenti);
 
@@ -56,9 +51,14 @@ buttonSubmit.addEventListener('click',
 
             document.getElementById('biglietto').innerHTML = 'Biglietto Young';
 
+            document.getElementById('carrozza').innerHTML = (Math.random(1,10).toFixed(1) * 10); // Accrocchio incredibile
+
+            document.getElementById('codice').innerHTML = (Math.random(1000, 9999) * 10000).toFixed(0) // Non so neanche perchè funzioni
+
+
         }
         
-        else if (age.value == '65') {
+        else if (age.value == 'Over') {
 
             prezzoViaggio = (prezzoViaggio - scontoQuaranta);
 
@@ -70,6 +70,10 @@ buttonSubmit.addEventListener('click',
 
             document.getElementById('biglietto').innerHTML = 'Biglietto Senior';
 
+            document.getElementById('carrozza').innerHTML = (Math.random(1,10).toFixed(1) * 10);
+
+            document.getElementById('codice').innerHTML = (Math.random(1000, 9999) * 10000).toFixed(0)
+
         }
 
         else {
@@ -80,20 +84,14 @@ buttonSubmit.addEventListener('click',
 
             document.getElementById('biglietto').innerHTML = 'Biglietto Standard';
 
+            document.getElementById('carrozza').innerHTML = (Math.random(1,10).toFixed(1) * 10);
+
+            document.getElementById('codice').innerHTML = (Math.random(1000, 9999) * 10000).toFixed(0)
+
         }
 
     }
 
 );
 
-
-buttonSubmit.addEventListener('click',
-
-    function() {
-
-        document.getElementsById('hide-card').style.display = 'block';
-    
-    }
-
-);
 
