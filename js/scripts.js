@@ -3,7 +3,9 @@ const age = document.getElementById('age');
 const buttonSubmit = document.getElementById('buttonSubmit');
 const prezzoPerKm = 0.21;
 
-console.log(kmDaPercorrere.value);
+function getRandomNum(min, max) {
+    return Math.random() * (max - min) + min;
+}
 
 buttonSubmit.addEventListener('click',
 
@@ -27,9 +29,9 @@ buttonSubmit.addEventListener('click',
 
             document.getElementById('biglietto').innerHTML = 'Biglietto Young';
 
-            document.getElementById('carrozza').innerHTML = (Math.random(1,10).toFixed(1) * 10); // Accrocchio incredibile
+            document.getElementById('carrozza').innerHTML = parseInt(getRandomNum(1, 9));
 
-            document.getElementById('codice').innerHTML = (Math.random(1000, 9999) * 10000).toFixed(0) // Non so neanche perchè funzioni
+            document.getElementById('codice').innerHTML = parseInt(getRandomNum(1000, 9000));
 
         }
         
@@ -47,9 +49,9 @@ buttonSubmit.addEventListener('click',
 
             document.getElementById('biglietto').innerHTML = 'Biglietto Senior';
 
-            document.getElementById('carrozza').innerHTML = (Math.random(1,10).toFixed(1) * 10);
+            document.getElementById('carrozza').innerHTML = parseInt(getRandomNum(1, 9));
 
-            document.getElementById('codice').innerHTML = (Math.random(1000, 9999) * 10000).toFixed(0)
+            document.getElementById('codice').innerHTML = parseInt(getRandomNum(1000, 9000));
 
         }
 
@@ -61,9 +63,9 @@ buttonSubmit.addEventListener('click',
 
             document.getElementById('biglietto').innerHTML = 'Biglietto Standard';
 
-            document.getElementById('carrozza').innerHTML = (Math.random(1,10).toFixed(1) * 10);
+            document.getElementById('carrozza').innerHTML = parseInt(getRandomNum(1, 9));
 
-            document.getElementById('codice').innerHTML = (Math.random(1000, 9999) * 10000).toFixed(0)
+            document.getElementById('codice').innerHTML = parseInt(getRandomNum(1000, 9000));
 
         }
 
